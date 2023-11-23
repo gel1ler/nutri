@@ -65,9 +65,9 @@ export const InstagramIcon = () => {
 
 export const PhoneCall = (
     {
-        icon, text
+        icon, text, big
     }: {
-        icon?: boolean, text?: string
+        icon?: boolean, text?: string, big?: boolean
     }) => {
     const [open, setOpen] = useState(false)
 
@@ -95,8 +95,9 @@ export const PhoneCall = (
                         onClick={() => setOpen(true)}
                         color='secondary.light'
                         className='flex items-center cursor-pointer'
+                        variant={big ? 'h6' : 'body1'}
                     >
-                        < Phone fontSize='small' />
+                        < Phone fontSize={!big ? 'small' : 'medium'} />
                         {mainInfo.phone}
                     </Typography>
 
