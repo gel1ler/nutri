@@ -4,7 +4,6 @@ import { AppBar } from '@mui/material'
 import Bar from '../bar/Bar'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { headerProps } from '@/customization/customization'
-import NavLinks from '../bar/NavLinks'
 
 const scrollHeight: number | undefined = headerProps.scrollHeight
 

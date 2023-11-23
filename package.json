@@ -24,6 +24,7 @@
     "react-spring": "^9.7.3"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-anchor-link-smooth-scroll": "^1.0.3",

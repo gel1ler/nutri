@@ -1,4 +1,3 @@
-import { headerProps } from '@/customization/customization'
 import { Toolbar } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
@@ -7,6 +6,7 @@ import { PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaI
 import MyDrawer from '../drawer/MyDrawer'
 import Link from 'next/link'
 import NavLinks from './NavLinks'
+
 const Bar = ({ }) => {
 
   return (
