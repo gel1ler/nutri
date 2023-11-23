@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { AppBar } from '@mui/material'
-import Bar from '../bar/Bar'
+import Bar from '../headerBar/Bar'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { headerProps } from '@/customization/customization'
 
