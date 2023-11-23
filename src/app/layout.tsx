@@ -1,4 +1,3 @@
-'use client'
 import ThemeRegistry from '@/customization/theme/ThemeRegistry'
 import './globals.css'
 import './anims.css'
