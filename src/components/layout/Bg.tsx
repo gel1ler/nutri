@@ -1,9 +1,8 @@
+'use client'
 import { Box } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import Plx from 'react-plx'
-
-
 
 const opData = [{
     start: 0,

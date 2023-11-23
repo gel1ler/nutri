@@ -33,7 +33,7 @@ const LongCard = ({ props }: { props: TProps }) => {
                 <Box>
                     <Divider sx={{ my: 2, width: '100%' }} />
                     <Typography data-aos-offset='20' data-aos='fade-up' variant="h6">
-                        <Text>1 месяц - 20000 руб</Text> или <Text>3 месяца - 50000 руб</Text>
+                        <Text>1 месяц - 20000 руб</Text> &nbsp; или &nbsp; <Text>3 месяца - 50000 руб</Text>
                     </Typography>
                     <Button data-aos-offset='20' data-aos='fade-up' color='secondary' variant='contained' className='w-fit' size='small' sx={{ borderRadius: 2, py: 1, px: 2, my: 2 }}>
                         Записаться

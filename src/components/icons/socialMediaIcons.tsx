@@ -48,7 +48,7 @@ export const InstagramIcon = () => {
                 <Typography variant='h6' textAlign='center'>
                     Для перехода в инстаграм профиль необходимо VPN подключение.
                 </Typography>
-                <Button color='primary' variant='contained' onClick={() => setOpen(false)}>
+                <Button color='secondary' variant='contained' onClick={() => setOpen(false)}>
                     <Link href={socialMedia.instagram || '#'} target='_blank'>
                         VPN включен
                     </Link>

@@ -1,11 +1,10 @@
+'use client'
 import ThemeRegistry from '@/customization/theme/ThemeRegistry'
 import './globals.css'
 import './anims.css'
 import Header from '@/components/layout/header/Header'
 import Footer from '@/components/layout/footer/Footer'
 import AOSProvider from '@/services/AOSProvider'
-import { Suspense } from 'react'
-import Loader from '../components/layout/loader'
 
 export default function RootLayout({
   children,

@@ -18,7 +18,7 @@ export const mainInfo: IMainInfo = {
 export const socialMedia: ISocialMedia = {
     vk: 'https://vk.com/',
     telegram: 'https://web.telegram.org/',
-    instagram: 'https://google.com/'
+    instagram: 'https://instagram.com/'
 }
 
 export const navigation: INavLink[] = [
