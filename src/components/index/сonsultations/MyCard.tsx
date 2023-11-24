@@ -41,7 +41,7 @@ const MyCard = ({ props }: { props: TProps }) => {
                     </Button>
                 </Box>
             </Box>
-            <Box className='w-1/3 rounded-xl overflow-hidden relative'>
+            <Box className='w-1/3 rounded-xl overflow-hidden relative drop-shadow-md'>
                 <Image
                     src={props.src!}
                     fill
