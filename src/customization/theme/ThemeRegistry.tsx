@@ -1,5 +1,5 @@
 'use client'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { NextAppDirEmotionCacheProvider } from './EmotionCache'
 import { Roboto } from 'next/font/google'
@@ -13,7 +13,8 @@ export const roboto = Roboto({
   subsets: ['cyrillic', 'latin']
 })
 
-const theme = createTheme(themeOptions)
+let theme = createTheme(themeOptions)
+theme = responsiveFontSizes(theme)
 
 export default function ThemeRegistry({
   children

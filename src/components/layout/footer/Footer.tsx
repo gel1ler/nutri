@@ -3,6 +3,7 @@ import { Box, Container, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
+import { centeredOnSmallScreen } from '@/customization/theme/ThemeOptions'
 
 const Text = ({ href, children }: { href: string, children: ReactNode }) =>
     <Link href={href}>
@@ -13,31 +14,31 @@ const Text = ({ href, children }: { href: string, children: ReactNode }) =>
 
 const Footer = () => {
     return (
-        <Box
-            className='p-10 pt-20 flex flex-col gap-2 justify-between bg-gray-100'
-        >
+        <Box className='bg-gray-100 p-4'>
             <Container
                 sx={{
                     display: 'grid',
                     gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+                    gap: 4,
+                    mt: 5
                 }}
             >
-                <Box className='flex flex-col gap-4'>
+                <Box className='flex flex-col gap-4 items-center'>
                     <Image
                         src='/logo/logo-horizontal.svg'
-                        width={250}
+                        width={220}
                         height={100}
                         alt='logo'
-                        className='mb-2'
+                        className='mb-2 object-cover'
                     />
                     <PhoneCall big />
-                    <Box className='flex justify-between w-1/2'>
+                    <Box className='flex justify-between w-1/2' sx={{maxWidth: '250px'}}>
                         <VkIcon />
                         <TelegramIcon />
                         <InstagramIcon />
                     </Box>
                 </Box>
-                <Box className='flex flex-col gap-6'>
+                <Box className='flex flex-col gap-6' sx={centeredOnSmallScreen()}>
                     <Typography variant='h5'>
                         Информация
                     </Typography>
@@ -46,7 +47,7 @@ const Footer = () => {
                     <Text href='#about_anchor'>Персональные данные</Text>
                     <Text href='#about_anchor'>Публичная оферта</Text>
                 </Box>
-                <Box className='flex flex-col gap-6'>
+                <Box className='flex-col gap-6' sx={{display:['none','none','flex']}}>
                     <Typography variant='h5'>
                         Услуги
                     </Typography>
@@ -54,7 +55,7 @@ const Footer = () => {
                     <Text href='#services_anchor'>Разовая консультация</Text>
                     <Text href='#services_anchor'>Индивидуальное сопровождение</Text>
                 </Box>
-                <Typography variant='body2' mt={5} sx={{ gridColumn: '1/4', color: 'GrayText' }}>
+                <Typography variant='body2' mb={1} mt={5} textAlign='center' sx={{ gridColumn: ['', '', '1/4'], color: 'GrayText' }}>
                     © Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.domainname.ru
                 </Typography>
             </Container>

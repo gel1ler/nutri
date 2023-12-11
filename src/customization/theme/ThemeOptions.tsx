@@ -1,4 +1,4 @@
-import { ThemeOptions } from '@mui/material/styles'
+import { SxProps, ThemeOptions } from '@mui/material/styles'
 import { colors, headerProps } from '../customization'
 import { Montserrat } from 'next/font/google'
 
@@ -32,5 +32,15 @@ export const themeOptions: ThemeOptions = {
         }
       }
     }
+  }
+}
+
+export const centeredOnSmallScreen = (props?: SxProps): SxProps => {
+  let PotentialProps = props ? { ...props } : {}
+  return {
+    textAlign: ['center', 'center', 'left'],
+    mx: ['auto', 'auto', 'unset'],
+    width: ['fit-content', 'fit-content', 'auto'],
+    ...PotentialProps
   }
 }

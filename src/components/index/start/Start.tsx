@@ -8,6 +8,7 @@ import Link from 'next/link'
 import MyDrawer from '../../layout/header/drawer/MyDrawer'
 import Plx from 'react-plx'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../../icons/socialMediaIcons'
+import { centeredOnSmallScreen } from '@/customization/theme/ThemeOptions'
 
 const startParallax = [
     {
@@ -51,10 +52,10 @@ const Start = () => {
                     <MyDrawer />
                 </Box>
                 <Box
-                    className='h-2/3 w-2/5 flex flex-col pt-10 justify-between'
+                    className='h-full w-2/5 flex flex-col pt-10'
                     sx={{
                         width: ['100%', '100%', '70%', '40%'],
-                        ml: ['20px', '20px', '5%', '10%']
+                        mx: ['20px', '20px', '5%', '10%']
                     }}
                 >
                     <Box className='flex gap-20'>
@@ -68,21 +69,30 @@ const Start = () => {
                         </Link>
                         <NavLinks hoverType='color' />
                     </Box>
-                    <Box className='flex flex-col gap-2'>
-                        <Typography variant='h2'>
+                    <Box className='flex flex-col gap-2' sx={{ mt: '20vh' }}>
+                        <Typography variant='h2' sx={centeredOnSmallScreen({ fontWeight: [400, 'light'] })}>
                             Анна Бехтольд
                         </Typography>
-                        <Typography variant='h4' color='secondary.main' fontWeight='bold'>
+                        <Typography
+                            variant='h5'
+                            color='secondary.main'
+                            fontWeight='bold'
+                            sx={centeredOnSmallScreen({ maxWidth: ['85%', '75%', '100%'] })}
+                        >
                             Нутрициолог-специалист в области питания, а также восстановления и поддержания здоровья немедикаментозным способом
                         </Typography>
-                        <Box className='w-fit'>
-                            <Box className='flex justify-between w-full mt-4 pr-8'>
+                        <Box className='w-80 flex flex-col items-center' sx={centeredOnSmallScreen()}>
+                            <Box className='flex justify-around w-full mt-4'>
                                 <PhoneCall icon />
                                 <VkIcon />
                                 <TelegramIcon />
                                 <InstagramIcon />
                             </Box>
-                            <Button color='secondary' variant='contained' className='w-fit' sx={{ borderRadius: 5, py: '10px', mt: 1 }}>
+                            <Button
+                                color='secondary'
+                                variant='contained'
+                                className='w-full'
+                                sx={{ borderRadius: 5, py: '10px', mt: 1 }}>
                                 Записаться на консультацию
                             </Button>
                         </Box>
