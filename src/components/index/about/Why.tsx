@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import Circle from './Circle'
 
@@ -63,23 +63,34 @@ const Horizontal = ({ i }: { i: { text: string, icon: string } }) =>
 
 const Why = () => {
     return (
-        <Box className='relative w-screen'>
+        <Box
+            className='relative'
+            sx={{
+                width: ['100vw', '100vw', 'auto']
+            }}
+        >
             <Box
                 className='w-1/3 absolute h-full bg-gradient-to-r from-white to-transparent left-0 top-0 z-50'
-                sx={{ width: ['25%', '33%'] }}
+                sx={{
+                    width: ['25%', '33%'],
+                    display: ['block', 'block', 'none']
+                }}
             />
             <Box
                 className='w-1/3 absolute h-full bg-gradient-to-r from-transparent to-white right-0 top-0 z-50'
-                sx={{ width: ['25%', '33%'] }}
+                sx={{
+                    width: ['25%', '33%'],
+                    display: ['block', 'block', 'none']
+                }}
             />
             <Box
-                className='my-5 relative pb-4'
+                className='my-5 relative pb-4 w-full'
                 sx={{
                     overflowX: ['scroll', 'scroll', 'hidden'],
                     overflowY: 'hidden',
                 }}
             >
-                <Box className='flex-col w-full' sx={{ display: ['none', 'none', 'flex'] }}>
+                <Box className='flex-col items-center' sx={{ display: ['none', 'none', 'flex'] }}>
                     {arr.map((i, key) => <Vertical key={key} i={i} num={key} />)}
                 </Box>
                 <Box

@@ -69,7 +69,7 @@ const Text = ({ children, hoverType }: IText) => {
 
 const NavLinks = ({ hoverType }: { hoverType: THoverType }) => {
     return (
-        <Box className='w-full justify-between items-center justify-self-center gap-4' sx={{ display: ['none', 'none', 'flex'] }}>
+        <Box className='w-full justify-between items-center justify-self-center gap-8' sx={{ display: ['none', 'none', 'flex'] }}>
             {navigation.map(i =>
                 i.anchorLink ?
                     <a key={i.id} href={i.href}>
