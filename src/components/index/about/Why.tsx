@@ -29,30 +29,31 @@ const arr = [
     },
 ]
 
+const Vertical = ({ num, i }: { num: number, i: { text: string, icon: string } }) =>
+    <Box key={num} className='grid' sx={{ gridTemplateColumns: '1fr 200px 1fr' }}>
+        {num % 2 === 0 ?
+            <Typography data-aos='fade-up' variant='h5' textAlign='right'>
+                {i.text}
+            </Typography>
+            : <Box />
+        }
+        <Box className='flex flex-col items-center'>
+            <Circle src={i.icon} />
+            {num < arr.length - 1 ? <Box className='w-1 h-24' bgcolor='secondary.main' data-aos='fade-up' /> : null}
+        </Box>
+        {num % 2 === 1 ?
+            <Typography data-aos='fade-up' variant='h5'>
+                {i.text}
+            </Typography>
+            : <Box />
+        }
+    </Box>
+
 const Why = () => {
     return (
         <Box className='mt-10'>
-            <Box className='flex flex-col items-center'>
-                {arr.map((i, key) =>
-                    <Box key={key} className='grid' sx={{ gridTemplateColumns: '1fr 200px 1fr' }}>
-                        {key % 2 === 0 ?
-                            <Typography data-aos='fade-up' variant='h5' textAlign='right'>
-                                {i.text}
-                            </Typography>
-                            : <Box />
-                        }
-                        <Box className='flex flex-col items-center'>
-                            <Circle src={i.icon} />
-                            {key < arr.length - 1 ? <Box className='w-1 h-24' bgcolor='secondary.main' data-aos='fade-up' /> : null}
-                        </Box>
-                        {key % 2 === 1 ?
-                            <Typography data-aos='fade-up' variant='h5'>
-                                {i.text}
-                            </Typography>
-                            : <Box />
-                        }
-                    </Box>
-                )}
+            <Box className='flex w-full' sx={{ flexDirection: ['row', 'row', 'column'], overflowX:'scroll' }}>
+                {arr.map((i, key) => <Vertical key={key} i={i} num={key} />)}
             </Box>
         </Box>
     )

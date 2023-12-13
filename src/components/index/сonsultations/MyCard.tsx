@@ -1,10 +1,7 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Box, CardMedia, Divider, SxProps } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 import Image from 'next/image';
 import ListFromText from '@/components/UI/text/ListFromText';
 
@@ -12,7 +9,7 @@ type TProps = {
     name: string,
     text: string,
     price: string,
-    src?: string
+    src: string
 }
 
 const MyCard = ({ props }: { props: TProps }) => {
@@ -43,7 +40,7 @@ const MyCard = ({ props }: { props: TProps }) => {
             </Box>
             <Box className='w-1/3 rounded-xl overflow-hidden relative drop-shadow-md'>
                 <Image
-                    src={props.src!}
+                    src={props.src}
                     fill
                     alt='imh'
                     className='object-cover'

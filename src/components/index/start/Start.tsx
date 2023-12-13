@@ -81,7 +81,7 @@ const Start = () => {
                         >
                             Нутрициолог-специалист в области питания, а также восстановления и поддержания здоровья немедикаментозным способом
                         </Typography>
-                        <Box className='w-80 flex flex-col items-center' sx={centeredOnSmallScreen()}>
+                        <Box className='w-80 flex flex-col items-center' sx={{ mx: ['auto','auto',0] }}>
                             <Box className='flex justify-around w-full mt-4'>
                                 <PhoneCall icon />
                                 <VkIcon />

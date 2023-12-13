@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Container, Divider, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
@@ -32,7 +32,7 @@ const Footer = () => {
                         className='mb-2 object-cover'
                     />
                     <PhoneCall big />
-                    <Box className='flex justify-between w-1/2' sx={{maxWidth: '250px'}}>
+                    <Box className='flex justify-between w-1/2' sx={{ maxWidth: '250px' }}>
                         <VkIcon />
                         <TelegramIcon />
                         <InstagramIcon />
@@ -47,7 +47,7 @@ const Footer = () => {
                     <Text href='#about_anchor'>Персональные данные</Text>
                     <Text href='#about_anchor'>Публичная оферта</Text>
                 </Box>
-                <Box className='flex-col gap-6' sx={{display:['none','none','flex']}}>
+                <Box className='flex-col gap-6' sx={{ display: ['none', 'none', 'flex'] }}>
                     <Typography variant='h5'>
                         Услуги
                     </Typography>
@@ -55,7 +55,8 @@ const Footer = () => {
                     <Text href='#services_anchor'>Разовая консультация</Text>
                     <Text href='#services_anchor'>Индивидуальное сопровождение</Text>
                 </Box>
-                <Typography variant='body2' mb={1} mt={5} textAlign='center' sx={{ gridColumn: ['', '', '1/4'], color: 'GrayText' }}>
+                <Divider sx={{ gridColumn: ['', '', '1/4'] }} />
+                <Typography variant='body2' mb={1} textAlign='center' sx={{ gridColumn: ['', '', '1/4'], color: 'GrayText' }}>
                     © Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.domainname.ru
                 </Typography>
             </Container>
