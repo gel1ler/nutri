@@ -29,8 +29,10 @@ const arr = [
     },
 ]
 
+const smallCardWidth = 300
+
 const Vertical = ({ num, i }: { num: number, i: { text: string, icon: string } }) =>
-    <Box key={num} className='grid' sx={{ gridTemplateColumns: '1fr 200px 1fr' }}>
+    <Box className='grid' sx={{ gridTemplateColumns: '1fr 200px 1fr' }}>
         {num % 2 === 0 ?
             <Typography data-aos='fade-up' variant='h5' textAlign='right'>
                 {i.text}
@@ -49,11 +51,48 @@ const Vertical = ({ num, i }: { num: number, i: { text: string, icon: string } }
         }
     </Box>
 
+const Horizontal = ({ i }: { i: { text: string, icon: string } }) =>
+    <Box className='flex flex-col gap-1' sx={{ width: smallCardWidth + 'px' }}>
+        <Box className='flex items-center'>
+            <Circle src={i.icon} sx={{ mx: 'auto' }} />
+        </Box>
+        <Typography data-aos='fade-up' variant='h5' textAlign='center'>
+            {i.text}
+        </Typography>
+    </Box>
+
 const Why = () => {
     return (
-        <Box className='mt-10'>
-            <Box className='flex w-full' sx={{ flexDirection: ['row', 'row', 'column'], overflowX:'scroll' }}>
-                {arr.map((i, key) => <Vertical key={key} i={i} num={key} />)}
+        <Box className='relative w-screen'>
+            <Box
+                className='w-1/3 absolute h-full bg-gradient-to-r from-white to-transparent left-0 top-0 z-50'
+                sx={{ width: ['25%', '33%'] }}
+            />
+            <Box
+                className='w-1/3 absolute h-full bg-gradient-to-r from-transparent to-white right-0 top-0 z-50'
+                sx={{ width: ['25%', '33%'] }}
+            />
+            <Box
+                className='my-5 relative pb-4'
+                sx={{
+                    overflowX: ['scroll', 'scroll', 'hidden'],
+                    overflowY: 'hidden',
+                }}
+            >
+                <Box className='flex-col w-full' sx={{ display: ['none', 'none', 'flex'] }}>
+                    {arr.map((i, key) => <Vertical key={key} i={i} num={key} />)}
+                </Box>
+                <Box
+                    className='w-full'
+                    sx={{
+                        gap: '25px',
+                        display: ['flex', 'flex', 'none'],
+                        width: `${smallCardWidth * arr.length}px`,
+                        mx: `calc(50vw - ${smallCardWidth / 2}px)`
+                    }}
+                >
+                    {arr.map((i, key) => <Horizontal key={key} i={i} />)}
+                </Box>
             </Box>
         </Box>
     )

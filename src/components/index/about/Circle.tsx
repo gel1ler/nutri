@@ -1,14 +1,15 @@
-import { Box } from '@mui/material'
+import { Box, SxProps } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
-const Circle = ({ src }: { src: string }) => {
+const Circle = ({ src, sx }: { src: string, sx?: SxProps }) => {
     return (
         <Box
             className='rounded-full p-2 aspect-square'
             color='secondary.main'
             border={3}
             data-aos='fade-up'
+            sx={sx}
         >
             <Image
                 src={src}

@@ -7,6 +7,8 @@ import Image from 'next/image'
 import Why from '@/components/index/about/Why'
 import Bg from '@/components/layout/Bg'
 import List from '@/components/index/сonsultations/List'
+import { centeredOnSmallScreen } from '@/customization/theme/ThemeOptions'
+import HelperTextOnSmallScreen from '@/components/UI/text/HelperTextOnSmallScreen'
 
 export const metadata: Metadata = {
   title: 'Нутрициолог - Анна Бехтольд',
@@ -22,9 +24,12 @@ export default function Home() {
       <Bg />
       <Container sx={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
         <Box className='w-full anchor' id='about_anchor'>
-          <Typography variant='h3' color='secondary' data-aos='fade-up'>
+          <Typography variant='h3' color='secondary' data-aos='fade-up' sx={centeredOnSmallScreen()}>
             Вы здесь потому, что
           </Typography>
+          <HelperTextOnSmallScreen>
+            Листайте вправо→
+          </HelperTextOnSmallScreen>
           <Why />
         </Box>
         <Box className='w-full anchor mb-20' id='services_anchor'>

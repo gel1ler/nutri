@@ -19,7 +19,7 @@ const opData = [{
 const data = [
     {
         start: 0,
-        end: '300vh',
+        end: '500vh',
         properties: [
             {
                 startValue: 0,
@@ -39,10 +39,6 @@ const Bg = () => {
         {
             src: '/bg/brok.png',
             coords: [2, 7]
-        },
-        {
-            src: '/bg/strawberry.png',
-            coords: [2, 55]
         },
     ]
     return (
