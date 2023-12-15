@@ -23,7 +23,7 @@ const LongCard = ({ props }: { props: TProps }) => {
         >
             <Box className='w-2/3 flex flex-col justify-between flex-grow pt-8 pl-8'>
                 <Box>
-                    <Typography data-aos='fade-up' variant='h5' gutterBottom>
+                    <Typography variant='h5' gutterBottom>
                         {props.name}
                     </Typography>
                     <ListFromText>
@@ -32,10 +32,10 @@ const LongCard = ({ props }: { props: TProps }) => {
                 </Box>
                 <Box>
                     <Divider sx={{ my: 2, width: '100%' }} />
-                    <Typography data-aos-offset='20' data-aos='fade-up' variant="h6">
+                    <Typography variant="h6">
                         <Text>1 месяц - 20000 руб</Text> &nbsp; или &nbsp; <Text>3 месяца - 50000 руб</Text>
                     </Typography>
-                    <Button data-aos-offset='20' data-aos='fade-up' color='secondary' variant='contained' className='w-fit' size='small' sx={{ borderRadius: 2, py: 1, px: 2, my: 2 }}>
+                    <Button color='secondary' variant='contained' className='w-fit' size='small' sx={{ borderRadius: 2, py: 1, px: 2, my: 2 }}>
                         Записаться
                     </Button>
                 </Box>

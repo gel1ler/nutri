@@ -4,54 +4,54 @@ import Image from 'next/image'
 import React from 'react'
 import Plx from 'react-plx'
 
-const opData = [{
-    start: 0,
-    end: '100vh',
-    properties: [
-        {
-            startValue: 0,
-            endValue: 1,
-            property: "opacity",
-        }
-    ]
-}]
-
-const data = [
+const opData = [
     {
         start: 0,
-        end: '300vh',
+        end: '100vh',
         properties: [
             {
                 startValue: 0,
-                endValue: -800,
+                endValue: 1,
+                property: "opacity",
+            },
+        ]
+    },
+    {
+        start: 0,
+        duration: '400vh',
+        properties: [
+            {
+                startValue: 0,
+                endValue: -1000,
                 property: "translateY",
             },
         ]
     }
 ]
 
+const arr = [
+    {
+        src: '/bg/avocado.png',
+        coords: [7, 15]
+    },
+    {
+        src: '/bg/brok.png',
+        coords: [60, 15]
+    },
+]
+
 const Bg = () => {
-    const arr = [
-        {
-            src: '/bg/avocado.png',
-            coords: [7, 7]
-        },
-        {
-            src: '/bg/brok.png',
-            coords: [10, 10]
-        },
-    ]
     return (
         <Box sx={{ display: ['none', 'none', 'block'] }}>
-            <Plx parallaxData={opData}>
-                <Box
-                    className='fixed -z-50 pointer-events-none top-0 left-0 w-screen opacity-25'
-                    sx={{
-                        height: '200vh',
-                        filter: 'blur(3px)'
-                    }}
-                >
-                    <Plx parallaxData={data} >
+            <Box
+                className='fixed -z-50 pointer-events-none top-0 left-0 w-screen opacity-20'
+                sx={{
+                    height: '200vh',
+                    filter: 'blur(3px)'
+                }}
+            >
+                <Plx parallaxData={opData} animateWhenNotInViewport>
+                    <Box>
                         {arr.map((i, key) =>
                             <Box
                                 key={key}
@@ -69,10 +69,10 @@ const Bg = () => {
                                 />
                             </Box>
                         )}
-                    </Plx>
-                </Box>
-            </Plx>
-        </Box>
+                    </Box>
+                </Plx>
+            </Box>
+        </Box >
     )
 }
 

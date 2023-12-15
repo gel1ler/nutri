@@ -34,7 +34,7 @@ const arr = [
     }
 ]
 
-const List = () => {
+const ServicesList = () => {
     const theme = useTheme()
     const isLg = useMediaQuery(theme.breakpoints.up('md'))
 
@@ -59,4 +59,4 @@ const List = () => {
     )
 }
 
-export default List
+export default ServicesList

@@ -14,7 +14,7 @@ const Text = ({ href, children }: { href: string, children: ReactNode }) =>
 
 const Footer = () => {
     return (
-        <Box className='bg-gray-100 p-4'>
+        <Box className='bg-gray-100 p-4' id='footer_anchor'>
             <Container
                 sx={{
                     display: 'grid',

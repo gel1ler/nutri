@@ -21,7 +21,7 @@ const MyCard = ({ props }: { props: TProps }) => {
         >
             <Box className='w-2/3 flex flex-col justify-between flex-grow pt-4 pl-4'>
                 <Box>
-                    <Typography data-aos='fade-up' variant='h5' gutterBottom>
+                    <Typography variant='h5' gutterBottom>
                         {props.name}
                     </Typography>
                     <ListFromText>
@@ -30,10 +30,10 @@ const MyCard = ({ props }: { props: TProps }) => {
                 </Box>
                 <Box>
                     <Divider sx={{ my: 2, width: '100%' }} />
-                    <Typography data-aos-offset='20' data-aos='fade-up' variant="h5" color="secondary.light">
+                    <Typography variant="h5" color="secondary.light">
                         {props.price}
                     </Typography>
-                    <Button data-aos-offset='20' data-aos='fade-up' color='secondary' variant='contained' className='w-fit' size='small' sx={{ borderRadius: 2, py: 1, px: 2, my: 2 }}>
+                    <Button color='secondary' variant='contained' className='w-fit' size='small' sx={{ borderRadius: 2, py: 1, px: 2, my: 2 }}>
                         Записаться
                     </Button>
                 </Box>

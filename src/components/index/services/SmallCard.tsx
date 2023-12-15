@@ -28,19 +28,17 @@ const SmallCard = ({ props }: { props: TProps }) => {
                         className='object-cover'
                     />
                 </Box>
-                <Typography data-aos='fade-up' variant='h5' gutterBottom textAlign='center'>
+                <Typography variant='h5' gutterBottom textAlign='center'>
                     {props.name}
                 </Typography>
                 <ListFromText centered>
                     {props.text}
                 </ListFromText>
                 <Divider sx={{ width: '100%' }} />
-                <Typography data-aos-offset='20' data-aos='fade-up' variant="h5" color="secondary.light" textAlign='center'>
+                <Typography variant="h5" color="secondary.light" textAlign='center'>
                     {props.price}
                 </Typography>
                 <Button
-                    data-aos-offset='20'
-                    data-aos='fade-up'
                     color='secondary'
                     variant='contained'
                     className='w-fit'

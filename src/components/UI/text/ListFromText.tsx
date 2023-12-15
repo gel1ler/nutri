@@ -5,7 +5,7 @@ const ListFromText = ({ children, centered }: { children: string, centered?: boo
 
     const needToCenter = !listItems.length && centered
     return (
-        <Box data-aos='fade-up' textAlign={needToCenter ? 'center' : 'left'}>
+        <Box textAlign={needToCenter ? 'center' : 'left'}>
             {listItems.length ?
                 <ul>
                     {listItems}

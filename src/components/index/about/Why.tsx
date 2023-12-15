@@ -41,7 +41,7 @@ const Vertical = ({ num, i }: { num: number, i: { text: string, icon: string } }
         }
         <Box className='flex flex-col items-center'>
             <Circle src={i.icon} />
-            {num < arr.length - 1 ? <Box className='w-1 h-24' bgcolor='secondary.main' data-aos='fade-up' /> : null}
+            {num < arr.length - 1 ? <Box className='w-1 h-24' bgcolor='secondary.main' data-aos-offse='20' data-aos='fade-up' /> : null}
         </Box>
         {num % 2 === 1 ?
             <Typography data-aos='fade-up' variant='h5'>

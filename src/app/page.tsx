@@ -1,14 +1,14 @@
 import Start from '@/components/index/start/Start'
 import type { Metadata } from 'next'
-import { Box, Container, Typography } from '@mui/material'
-import wait from '@/services/wait'
+import { Box, Container } from '@mui/material'
 import Loader from '../components/layout/loader'
-import Image from 'next/image'
 import Why from '@/components/index/about/Why'
 import Bg from '@/components/layout/Bg'
-import List from '@/components/index/сonsultations/List'
-import { centeredOnSmallScreen } from '@/customization/theme/ThemeOptions'
+import ServicesList from '@/components/index/services/ServicesList'
 import HelperTextOnSmallScreen from '@/components/UI/text/HelperTextOnSmallScreen'
+import Title from '@/components/UI/text/Title'
+import FeedbackList from '@/components/index/feedback/FeedbackList'
+import AboutMe from '@/components/index/about/AboutMe'
 
 export const metadata: Metadata = {
   title: 'Нутрициолог - Анна Бехтольд',
@@ -23,20 +23,32 @@ export default function Home() {
       <Start />
       <Bg />
       <Container sx={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-        <Box className='w-full anchor' id='about_anchor'>
-          <Typography variant='h3' color='secondary' data-aos='fade-up' sx={centeredOnSmallScreen()}>
+        <Box className='w-full'>
+          <Title>
             Вы здесь потому, что
-          </Typography>
+          </Title>
           <HelperTextOnSmallScreen>
             Листайте вправо→
           </HelperTextOnSmallScreen>
           <Why />
         </Box>
+        <Box className='w-full anchor mb-20' id='about_anchor'>
+          <Title centered>
+            Обо мне
+          </Title>
+          <AboutMe />
+        </Box>
         <Box className='w-full anchor mb-20' id='services_anchor'>
-          <Typography variant='h3' color='secondary' textAlign='center' data-aos='fade-up'>
-            Что я предлагаю
-          </Typography>
-          <List />
+          <Title centered>
+            Услуги
+          </Title>
+          <ServicesList />
+        </Box>
+        <Box className='w-full anchor mb-20' id='feedback_anchor'>
+          <Title centered>
+            Отзывы
+          </Title>
+          <FeedbackList />
         </Box>
       </Container>
     </>
