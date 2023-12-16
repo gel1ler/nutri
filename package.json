@@ -21,7 +21,8 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18",
     "react-plx": "^2.1.2",
-    "react-spring": "^9.7.3"
+    "react-spring": "^9.7.3",
+    "react-use": "^17.4.2"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

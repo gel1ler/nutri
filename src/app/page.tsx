@@ -9,6 +9,7 @@ import HelperTextOnSmallScreen from '@/components/UI/text/HelperTextOnSmallScree
 import Title from '@/components/UI/text/Title'
 import FeedbackList from '@/components/index/feedback/FeedbackList'
 import AboutMe from '@/components/index/about/AboutMe'
+import FAQ from '@/components/index/FAQ/FAQ'
 
 export const metadata: Metadata = {
   title: 'Нутрициолог - Анна Бехтольд',
@@ -49,6 +50,12 @@ export default function Home() {
             Отзывы
           </Title>
           <FeedbackList />
+        </Box>
+        <Box className='w-full anchor mb-20' id='FAQ_anchor'>
+          <Title>
+            Ответы на частые вопросы
+          </Title>
+          <FAQ />
         </Box>
       </Container>
     </>
